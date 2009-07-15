@@ -1,0 +1,23 @@
+TODO
+
+Email notifications!
+Figure out a place for chief editors to change the category of a paper/abstract
+Add a cancel button - where though?
+
+
+--
+
+Visually differentiate between confidential and not-confidential comments
+Make the site work for very wide widths as well as constricted ones
+Replace the .flash class with .notice? makes more sense
+Add a note "cannot be modified while in review"
+Continue experimenting with styling the "recommndation" radio
+
+
+QUESTIONS
+
+Keywords still being used?
+
+LEARN ABOUT CACHE
+
+Sending emails with csp

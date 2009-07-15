@@ -1,0 +1,125 @@
+pre { /* these will be notes to myself */
+  background: black;
+  color: white;
+  padding: 12px;
+  position: absolute;
+  bottom: 12px;
+}
+
+pre:hover {
+  filter:alpha(opacity=10);
+	-moz-opacity:0.1;
+	-khtml-opacity: 0.1;
+	opacity: 0.1;
+
+}
+
+body {
+  padding: 12px;
+  max-width: 1080px;
+}
+
+p {
+  margin: 12px 0;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+
+table { width: 100%; }
+
+ul {
+  list-style-type: square;
+  padding-left: 24px;
+}
+
+#delete_button_row {
+  background: white;
+}
+/* colors */
+
+.flash {
+  background: #FEFF85;
+  padding: 6px 12px;
+  border: 1px solid #DC0;
+  border-width: 1px 0;
+  margin-left: -12px;
+  margin-right: -12px;
+}
+
+.flash.negative {
+  background: #FBB;
+  border-color: red;
+}
+
+.flash.positive {
+  background: #BFA;
+  border-color: green;
+}
+
+th {
+  background: #DDD;
+}
+
+table {
+  background: #EEE;
+}
+tr:hover {
+  outline: 1px solid #BBB;
+  background: white;
+}
+
+.flash a {
+  color: black;
+  font-weight: bold;
+}
+
+blockquote {
+  border: 1px solid gray;
+  margin: 12px 0px;
+  padding: 0 12px;
+  background: #EEE;
+}
+
+span.accept, span.accept_with_revisions, span.reject {
+  border: 1px solid black;
+}
+.accept {
+  background: green;
+}
+
+.accept_with_revisions {
+  background: yellow;
+}
+
+.reject {
+  background: red;
+}
+
+.table_form_row {
+  background: white; /* whatever the body background is */
+}
+
+form .instructions {
+  color: maroon;
+}
+
+/* fonts */
+body {
+  font-family: Georgia, serif;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: sans-serif;
+  line-height: 1.5;
+  margin: 12px 0;
+}
+
+h1 { font-size: 36px; }
+h2 { font-size: 24px; }
+h3 { font-size: 18px; }
+h4 { font-size: 16px; }

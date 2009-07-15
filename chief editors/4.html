@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <link rel="stylesheet" type="text/css" href="../reset.css">
+  <link rel="stylesheet" type="text/css" href="../base.css">
+  <title>Review summary</title>
+  <style>
+form .control {
+  margin: 12px 0;
+  margin-left: 200px;
+}
+form .label {
+  float: left;
+  width: 200px;
+  margin-left: -200px;
+}
+textarea {
+  width: 500px;
+}
+
+input[type=submit] {
+  font-weight: bold;
+}
+
+/* try: */
+#recommendation label {
+  display: block;
+  width: 200px;
+  font-size: large;
+  position: relative;
+}
+
+#recommendation label input {
+  position: absolute;
+  right: 0;
+}
+  </style>
+</head>
+<body>
+  <div id="nav"><a href="3.html">&larr; Dashboard</a></div>
+  <h1>Review Summary</h1>
+  <p class="flash">Please look over reviewer comments and make a final recommendation.</p>
+  <h2>Example</h2>
+  <div>Category 1, Sub3</div>
+  <div>Author names</div>
+  <p>Abstract, blah, Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,</p>
+  
+  <h3>Reviewer recommendations</h3>
+  
+  <h4>Dr. Zhang &mdash; <span class="accept_with_revisions">Accept with revisions</span></h4>
+  <h5>To you (confidential)</h5>
+  <blockquote><p>This abstract does not look extremely promising, but we don't want to offend...</p></blockquote>
+  <h5>To the author</h5>
+  <blockquote><p>This abstract was lacking a few things, which we'd like you to address: blah...</p></blockquote>
+  
+  <h4>Daniel Rice &mdash; <span class="accept">Accept</span></h4>
+  <h5>To you (confidential)</h5>
+  <blockquote><p>I was extremely impressed, this should be quite the show</p></blockquote>
+  <h5>To the author</h5>
+  <blockquote><p>Great work, I especially liked the part where you...</p></blockquote>
+  
+  <h3>Make a final recommendation</h3>
+    <form action="5.html">
+    <div class="control" id="recommendation">
+      <div class="label">Recommendation:</div>
+      <label for="accept">Accept <input type="radio" name="abstract_recommendation" id="accept" /></label>
+      <label for="accept_with_revisions">Accept with revisions <input type="radio" name="abstract_recommendation" id="accept_with_revisions" /></label>
+      <label for="reject">Reject <input type="radio" name="abstract_recommendation" id="reject" /></label>
+    </div>
+    <div class="control">
+      <input type="submit" value="Submit" />
+    </div>
+  </form>
+  
+  <pre>Select all details about the abstract/paper.
+Select all comments and recommendations made about the abstract/paper.
+After validating, save the final recommendation to the database.</pre>
+</body>
+</html>

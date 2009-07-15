@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <link rel="stylesheet" type="text/css" href="../reset.css">
+  <link rel="stylesheet" type="text/css" href="../base.css">
+  <title>Paper submission</title>
+  <style type="text/css">
+form div {
+  margin: 12px 0;
+}
+label {
+  float: left;
+  width: 200px;
+  margin-left: -200px;
+}
+input[type=text], textarea, select {
+  /* width: 200px; */
+}
+form div {
+  margin-left: 200px;
+}
+
+#paper_title {
+  font-size: 32px;
+}
+#paper_abstract {
+  width: 500px;
+}
+
+select {
+  width: 100px;
+}
+
+
+  </style>
+</head>
+<body>
+  <div id="nav"><a href="3.html">&larr; Dashboard</a></div>
+  <h1>Paper Submission</h1>
+  <p class="flash">You may edit any of the previous information, including the abstract.</p>
+  <form action="6.html">
+    <div>
+      <label for="paper_title">Title:</label>
+      <input type="text" id="paper_title" value="Example" />
+    </div>
+    <div>
+      <label for="paper_abstract">Abstract:</label>
+      <textarea id="paper_abstract" rows="10">Abstract, blah, Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,</textarea>
+    </div>
+    <div>
+      <label for="abstract_keywords">Keywords:</label>
+      <input id="abstract_keywords" value="emissions, other keywords" />
+    </div>
+    <div>
+      <label for="abstract_category">Category:</label>
+      <select id="abstract_category">
+        <optgroup label="Subject area 1">
+          <option>Subject 1</option>
+          <option>Subject 2</option>
+        </optgroup>
+        <optgroup label="Subject area 2">
+          <option>Subject 1</option>
+          <option>Subject 2</option>
+        </option>
+      </select>
+    </div>
+    <div>
+      <label>Authors:</label>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Institution</th>
+          <th>Address</th>
+          <th>Phone</th>
+        </tr>
+        <tr>
+          <td><input value="My name" /></td>
+          <td><input value="My email" /></td>
+          <td><input value="My institution" /></td>
+          <td><input value="My address" /></td>
+          <td><input value="My phone number" /></td>
+        </tr>
+      </table>
+      <p><a href="?authors=4">Add an author</a></p>
+    </div>
+    <div>
+      <label for="paper_attachment">File:</label>
+      <p class="instructions">Please upload a single document. Acceptable formats are Microsoft Word or Adobe PDF. <input type="file" id="paper_attachment" /></p>
+      
+    </div>
+    <div>
+      <input type="submit" name="submit" value="Submit paper" />
+    </div>
+  </form>
+  
+  <pre>Select the Title, Body, Keywords, Category, and Author details of the abstract with the given id.
+After validating, update the Abstract with the changed details.
+After validating, create a record for the paper, save the uploaded file*, and store a path to that file in the Papers table.
+
+*Figure out how to accomplish this, presumably with Cache ObjectScript.</pre>
+</body>
+</html>
