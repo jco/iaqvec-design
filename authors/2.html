@@ -34,8 +34,37 @@ select {
   width: 150px;
 }
 
-
+pre {display:none;}
   </style>
+  <script type="text/javascript" src="../jquery-1.3.2.min.js"></script>
+  <script type="text/javascript">
+function canDelete() {
+  if($("#authors tbody")[0].rows.length < 2){
+    return false;
+  } else {
+  return true;
+  }
+}
+$(function() {
+  
+  var blankrow = $("#authors tbody tr:last")[0].cloneNode(true);
+  
+  $("#addauthor").click(function(){
+    $("#authors tbody")[0].appendChild(blankrow.cloneNode(true));
+    return false;
+  });
+  
+  $("#removeauthor").click(function(){
+    if( canDelete() ) {
+      var oldChild = $("#authors tr:last")[0];
+      $("#authors tbody")[0].removeChild(oldChild);
+    } else {
+      alert("A paper must have at least one author.")
+    }
+    return false;
+  });
+});
+  </script>
 </head>
 <body>
   <div id="nav"><a href="1.html">&larr; Dashboard</a></div>
@@ -63,46 +92,53 @@ select {
         <optgroup label="Subject area 2">
           <option>Subject 1</option>
           <option>Subject 2</option>
-        </option>
+        </optgroup>
       </select>
     </div>
     <div>
       <label>Authors:</label>
-      <table>
-        <tr>
-          <th>Corresponding author?</th>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Institution</th>
-          <th>Address</th>
-          <th>Phone</th>
-        </tr>
-        <tr>
-          <td><input name="corresponding" type="radio" /></td>
-          <td><input value="My name" /></td>
-          <td><input value="My email" /></td>
-          <td><input value="My institution" /></td>
-          <td><input value="My address" /></td>
-          <td><input value="My phone number" /></td>
-        </tr>
-        <tr>
-          <td><input name="corresponding" type="radio" /></td>
-          <td><input /></td>
-          <td><input /></td>
-          <td><input /></td>
-          <td><input /></td>
-          <td><input /></td>
-        </tr>
-        <tr>
-          <td><input name="corresponding" type="radio" /></td>
-          <td><input /></td>
-          <td><input /></td>
-          <td><input /></td>
-          <td><input /></td>
-          <td><input /></td>
-        </tr>
+      <table id="authors">
+        <thead>
+          <tr>
+            <th>Corresponding author?</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Institution</th>
+            <th>Address</th>
+            <th>Phone</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input name="corresponding" type="radio" /></td>
+            <td><input value="My name" /></td>
+            <td><input value="My email" /></td>
+            <td><input value="My institution" /></td>
+            <td><input value="My address" /></td>
+            <td><input value="My phone number" /></td>
+          </tr>
+          <tr>
+            <td><input name="corresponding" type="radio" /></td>
+            <td><input /></td>
+            <td><input /></td>
+            <td><input /></td>
+            <td><input /></td>
+            <td><input /></td>
+          </tr>
+          <tr>
+            <td><input name="corresponding" type="radio" /></td>
+            <td><input /></td>
+            <td><input /></td>
+            <td><input /></td>
+            <td><input /></td>
+            <td><input /></td>
+          </tr>
+        </tbody>
       </table>
-      <p><a href="?authors=4">Add an author</a></p>
+      <p>
+        <a href="?authors=4" id="addauthor">Add an author</a> |
+        <a href="?authors=2" id="removeauthor">Remove an author</a>
+      </p>
     </div>
     <div>
       <input type="submit" name="submit" value="Submit Abstract" />
