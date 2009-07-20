@@ -31,13 +31,21 @@ input[type=submit] {
   width: 200px;
   font-size: large;
   position: relative;
+  margin-bottom: 2px;
+  padding: 3px 6px;
 }
 
 #recommendation label input {
   position: absolute;
   right: 0;
+  margin: 3px 6px;
 }
 
+label.accept{background: #DFC;}
+label.accept_with_revisions {background: #FEA;}
+label.reject {background: #FCB;}
+
+pre {display:none;}
   </style>
 </head>
 <body>
@@ -58,9 +66,9 @@ input[type=submit] {
     </div>
     <div class="control" id="recommendation">
       <div class="label">Recommendation:</div>
-      <label for="accept">Accept <input type="radio" name="abstract_recommendation" id="accept" /></label>
-      <label for="accept_with_revisions">Accept with revisions <input type="radio" name="abstract_recommendation" id="accept_with_revisions" /></label>
-      <label for="reject">Reject <input type="radio" name="abstract_recommendation" id="reject" /></label>
+      <label class="accept" for="accept">Accept <input type="radio" name="abstract_recommendation" id="accept" /></label>
+      <label class="accept_with_revisions" for="accept_with_revisions">Accept with revisions <input type="radio" name="abstract_recommendation" id="accept_with_revisions" /></label>
+      <label class="reject" for="reject">Reject <input type="radio" name="abstract_recommendation" id="reject" /></label>
     </div>
     <div class="control">
       <button>Save</button> <input type="submit" value="Submit" />

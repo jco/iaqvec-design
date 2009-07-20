@@ -16,8 +16,10 @@ Continue experimenting with styling the "recommndation" radio
 
 QUESTIONS
 
-Keywords still being used?
-
 LEARN ABOUT CACHE
 
 Sending emails with csp
+saving files with csp
+redirecting with csp
+
+"template files" calling a cache function defined in ANOTHER csp page. makes things dryer
